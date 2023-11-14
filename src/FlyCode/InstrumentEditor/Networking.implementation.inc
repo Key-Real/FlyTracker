@@ -1249,9 +1249,9 @@ begin
     aValue.x:= buf[3];
     aValue.y:= buf[4];
 
-    if buf[0] = 0 then Module.instruments[buf[1]].VolumeEnvelope.node[buf[2]]:= aValue;
-    if buf[0] = 1 then Module.instruments[buf[1]].PanningEnvelope.node[buf[2]]:= aValue;
-    if buf[0] = 2 then Module.instruments[buf[1]].PitchEnvelope.node[buf[2]]:= aValue;
+    if buf[0] = 1 then Module.instruments[buf[1]].VolumeEnvelope.node[buf[2]]:= aValue;
+    if buf[0] = 2 then Module.instruments[buf[1]].PanningEnvelope.node[buf[2]]:= aValue;
+    if buf[0] = 3 then Module.instruments[buf[1]].PitchEnvelope.node[buf[2]]:= aValue;
 
 end;
 

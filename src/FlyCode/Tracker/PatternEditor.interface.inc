@@ -73,6 +73,12 @@ var
 var
 
     keyNoteOldTime : qword;
+    keyNoteFirst : boolean;
+    keyNoteAfterFirst : boolean;
+
+    procedure processRecordNote;
+
+var
 
     keyStroke : longint;
 

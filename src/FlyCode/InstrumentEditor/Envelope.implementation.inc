@@ -1367,8 +1367,8 @@ begin
                         if currentEnvelopMode = 2 then Module.instruments[CurrentInstrument].PanningEnvelope.node[currentNode]:= aValue;
                         if currentEnvelopMode = 3 then Module.instruments[CurrentInstrument].PitchEnvelope.node[currentNode]:= aValue;
 
-                        netSendEnvelopeToucher(currentEnvelopMode - 1, CurrentInstrument, currentNode, aValue.x, aValue.y);
-                    
+                        netSendEnvelopeToucher(currentEnvelopMode, CurrentInstrument, currentNode, aValue.x, aValue.y);
+                        
                 end;
                 if (not mouseL) then begin
                     touchedEnvelopePoint:= false;

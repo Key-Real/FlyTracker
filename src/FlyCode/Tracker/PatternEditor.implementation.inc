@@ -695,6 +695,22 @@ begin
 end;
 
 
+procedure TTracker.processRecordNote;
+begin
+		if MoreThanOneNotePlaying then begin
+	
+		end else begin
+			lastNote:= VirtualPianoGetNoteFromKeyboardPress;
+		end;
+
+		updateEditModeNote(lastNote);
+		
+		virtualPianoPlayingNote:= true;
+
+		if (currentChannelMode = cursorMode.note) then PianoPlaySample(VirtualPianoGetNoteFromKeyboardPress, VirtualKeyboard);
+end;
+
+
 procedure TTracker.updateTrackerInEditMode;
 begin
 
@@ -707,22 +723,30 @@ begin
 	end;
 
 
-	if ((VirtualPianoGetNoteFromKeyboardPress <> -1) or (getNumberFromKeyboard <> -1)) and ((GetTickCount64 - keyNoteOldTime) > Theme_Tracker_KeyNote_Timeout) then begin
+	if ((VirtualPianoGetNoteFromKeyboardPress <> -1) or (getNumberFromKeyboard <> -1)) and (not keyNoteAfterFirst) and (not keyNoteFirst) then begin	
+		keyNoteOldTime:= GetTickCount64;
+		keyNoteFirst:= true;
+		
+
+		processRecordNote;
+	end;
+
+	if keyNoteFirst and ((GetTickCount64 - keyNoteOldTime) > Theme_Tracker_KeyNote_FirstTimeout) then begin
+		keyNoteOldTime:= GetTickCount64;
+		keyNoteAfterFirst:= true;
+	end;
+
+	if ((VirtualPianoGetNoteFromKeyboardPress <> -1) or (getNumberFromKeyboard <> -1)) and (keyNoteAfterFirst) and ((GetTickCount64 - keyNoteOldTime) > Theme_Tracker_KeyNote_Timeout) then begin
 
 		keyNoteOldTime:= GetTickCount64;
-		
-		if MoreThanOneNotePlaying then begin
-	
-		end else begin
-			lastNote:= VirtualPianoGetNoteFromKeyboardPress;
-		end;
 
-		updateEditModeNote(lastNote);
-		
-		virtualPianoPlayingNote:= true;
+		processRecordNote;
 
-		if (currentChannelMode = cursorMode.note) then PianoPlaySample(VirtualPianoGetNoteFromKeyboardPress, VirtualKeyboard);
+    end;
 
+    if (VirtualPianoGetNoteFromKeyboardPress = -1) and keyNoteAfterFirst then begin
+    	keyNoteFirst:= false;
+    	keyNoteAfterFirst:= false;
     end;
 
     if virtualPianoPlayingNote and ((GetTickCount64 - keyNoteOldTime) > Theme_Tracker_KeyNote_Timeout) then begin
@@ -731,7 +755,7 @@ begin
 
     	virtualPianoPlayingNote:= false;
 
-    end;
+	end;
 
 	
 	if (MIDICommand = MIDIKeyDown) and (not MIDIKeyPressed) then begin

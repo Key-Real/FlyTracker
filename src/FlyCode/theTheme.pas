@@ -50,7 +50,8 @@ uses
    Theme_Tracker_DisplayPattern_CursorMode_Effect3_Length : dword  = 6;
    Theme_Tracker_DisplayPattern_Key_TimeOut : dword  = 256;
    Theme_Tracker_DisplayPattern_Key_Time_Counter : dword  = 1;
-   Theme_Tracker_KeyNote_Timeout : dword  = 200;
+   Theme_Tracker_KeyNote_FirstTimeout : dword  = 200;
+   Theme_Tracker_KeyNote_Timeout : dword  = 90;
 
    Theme_Tracker_UVMeters_fadeout : dword  = 3;
 
