@@ -1,0 +1,107 @@
+!!!!!!!!!!!!!!!!!!!!
+
+    InstrumentEditor: SHOW SAMPLE OFFSET where the mouse is
+    
+!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+4. Feature
+Doppelklick auf den Kanal selektiert den gesammten kanal
+
+7. Feature
+wunter windows platte auswählen
+
+1. Mit dem MouseScrollWheel in die Wave reinzoomen/rauszoomen
+
+
+- InstrumentClear soll auch das rote piano mapping kram clearen (freshMappedSampleOnPanoKey[instruemntnumber,mappedkes])
+
+
+
+
+- WAVE MIXDOWN STREAM UNDERFLOW BUG!!!!!!!!!!
+
+
+
+
+
+pay attention to Current Free Cannel in Virtual Piano. Brache ein function DetectFreeChannel():longint
+
+
+
+
+
+                            
+                            + '         Shift+F3                             Cut track.' + endl
+                            + '         Shift+F4                             Copy trach.' + endl
+                            + '         Shift+F5                              Past track.' + endl
+                            + '         Control+F3                      Cut pattern.' + endl
+                            + '         Control+F4                      Copy pattern.' + endl
+                            + '         Control+F5                       Paste pattern.' + endl
+                            
+                            
+              
+                            + endl
+                            + endl
+                            + '    Miscelloneous:' + endl
+                            + '         Alt Gr                                      Play pattern.' + endl
+                            + '         Right shift                         Record pattern.' + endl
+
+                            + '         Shift+Left                          Increase song position.' + endl
+                            + '         Shift+Right                      Decrease song position.' + endl
+                            + '         Cntrol+Left                      Increase pattern number.' + endl
+                            + '         Cntrol+Right                  Decrease pattern number.' + endl
+                            + endl
+                            + '    Miscelloneous (an a Mac keyboard):' + endl
+                            + '         Right Control                 Play song.' + endl
+                            + '         Right alt/option           Play pattern.' + endl
+                            + '         Right Shift                        Record pattern.' + endl
+                            + endl
+                            + endl
+                            + '    Window switching:' + endl
+                            + '         Control+A                         Advanced edit.' + endl
+                            + '         Control+T                         Transpose.' + endl
+                            + endl
+                            + endl
+                            + '    Instrument select (Nemeric keyboard):' + endl
+                            + '         1..0                                            Select insturment in block.'+ endl
+                            + '         ,                                                    Clear instrument.'+ endl
+                            + '         Shift+Up                             Select previous instrument.'+ endl
+                            + '         Shift+DOWN                  Select next instrument.'+ endl
+                            + endl
+                            + endl
+                            + '    Command/Volume macro:' + endl
+                            + '         Alt+1..0                                 Write command/volume at cursor.'+ endl
+                            + '         Shift+Alt+1..0                 Read command/volume at cursor.'+ endl
+                            + endl
+                            + endl
+                            + '    Scale-fade volume:' + endl
+                            + '         Shift+V                                   Scale-fade volume in track.'+ endl
+                            + '         Control+V                            Scale-fade volume in pattern.'+ endl
+                            + '         Alt+V                                        Scale-fade volume in block.'+ endl
+                            + endl
+                            + endl
+                            + '    Transpose:' + endl
+                            + '         Shift+F7                                 Transpose current instrument in track down.'+ endl
+                            + '         Shift+F8                                 Transpose current instrument in track up.'+ endl
+                            + '         Control+F7                          Transpose current instrument in pattern down.'+ endl
+                            + '         Control+F8                          Transpose current instrument in pattern up.'+ endl
+                            + '         Alt+F7                                       Transpose current instrument in block down.'+ endl
+                            + '         Alt+F8                                       Transpose current instrument in block up.'+ endl
+                            + '         Shift+F1                                  Transpose all instrument in track down.'+ endl
+                            + '         Shift+F2                                  Transpose all instrument in track up.'+ endl
+                            + '         Control+F1                           Transpose all instrument in pattern down.'+ endl
+                            + '         Control+F2                           Transpose all instrument in pattern up.'+ endl
+                            + '         Alt+F1                                        Transpose all instrument in block down.'+ endl
+                            + '         Alt+F2                                        Transpose all instrument in block up.'+ endl
+                            ;
+
+
+
+
+
+                            SHIFT INSERT, SHIFT BACKSPACE   in die doc, da implementiert
+
+SHIFT INSERT, SHIFT BACKSPACE   im block machen                            

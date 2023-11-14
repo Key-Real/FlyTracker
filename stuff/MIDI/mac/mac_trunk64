@@ -1,0 +1,6 @@
+#!/bin/bash
+rm test
+/usr/local/lib/fpc/3.3.1/ppca64 test.pas -gl -Cio
+rm *.o
+rm *.ppu
+./test

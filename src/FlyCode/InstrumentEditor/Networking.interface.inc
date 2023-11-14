@@ -1,0 +1,102 @@
+
+procedure netSendRadioButtonLoopTypeNoLoop;
+procedure netGetRadioButtonLoopTypeNoLoop;
+procedure netSendRadioButtonLoopTypeForwardLoop;
+procedure netGetRadioButtonLoopTypeForwardLoop;
+procedure netSendRadioButtonLoopTypePingPongLoop;
+procedure netGetRadioButtonLoopTypePingPongLoop;
+
+procedure netSendRadioButtonSampleBits8;
+procedure netGetRadioButtonSampleBits8;
+procedure netSendRadioButtonSampleBits16;
+procedure netGetRadioButtonSampleBits16;
+
+procedure netSendRadioButtonSampleMono;
+procedure netGetRadioButtonSampleMono;
+procedure netSendRadioButtonSampleStereo;
+procedure netGetRadioButtonSampleStereo;
+
+
+procedure netSendRadioButtonWaveStyle1;
+procedure netGetRadioButtonWaveStyle1;
+procedure netSendRadioButtonWaveStyle2;
+procedure netGetRadioButtonWaveStyle2;	
+procedure netSendRadioButtonWaveStyle3;
+procedure netGetRadioButtonWaveStyle3;	
+procedure netSendRadioButtonWaveStyle4;
+procedure netGetRadioButtonWaveStyle4;		
+procedure netSendRadioButtonWaveStyle5;
+procedure netGetRadioButtonWaveStyle5;
+
+procedure netSendRadioButtonLoopNormal;
+procedure netGetRadioButtonLoopNormal;
+procedure netSendRadioButtonLoopSustain;
+procedure netGetRadioButtonLoopSustain;
+
+procedure netSendButtonUPLoopStart(value: longint);
+procedure netGetButtonUPLoopStart;
+procedure netSendButtonDOWNLoopStart(value: longint);
+procedure netGetButtonDOWNLoopStart;
+
+procedure netSendButtonUPLoopEnd(value: longint);
+procedure netGetButtonUPLoopEnd;
+procedure netSendButtonDOWNLoopEnd(value: longint);
+procedure netGetButtonDOWNLoopEnd;
+
+procedure netSendButtonUPSustainLoopStart(value: longint);
+procedure netGetButtonUPSustainLoopStart;
+procedure netSendButtonDOWNSustainLoopStart(value: longint);
+procedure netGetButtonDOWNSustainLoopStart;
+
+procedure netSendButtonUPSustainLoopEnd(value: longint);
+procedure netGetButtonUPSustainLoopEnd;
+procedure netSendButtonDOWNSustainLoopEnd(value: longint);
+procedure netGetButtonDOWNSustainLoopEnd;
+
+procedure netSendButtonStopWave;
+procedure netGetButtonStopWave;
+procedure netSendButtonPlayWave;
+procedure netGetButtonPlayWave;
+procedure netSendButtonWaveRange;
+procedure netGetButtonWaveRange;
+procedure netSendButtonWaveDisplay;
+procedure netGetButtonWaveDisplay;
+procedure netSendButtonWaveVolume;
+procedure netGetButtonWaveVolume;
+procedure netSendButtonXFade;
+procedure netGetButtonXFade;
+
+procedure netSendButtonCut;
+procedure netGetButtonCut;
+procedure netSendButtonCopy;
+procedure netGetButtonCopy;
+procedure netSendButtonPaste;
+procedure netGetButtonPaste;
+
+procedure netSendButtonShowSelectedWave;
+procedure netGetButtonShowSelectedWave;
+procedure netSendButtonZoomOutWave;
+procedure netGetButtonZoomOutWave;
+procedure netSendButtonRangeAllWave;
+procedure netGetButtonRangeAllWave;
+procedure netSendButtonShowAllWave;
+procedure netGetButtonShowAllWave;
+procedure netSendButtonCrop;
+procedure netGetButtonCrop;
+
+
+procedure netSendButtonVolume;
+procedure netGetButtonVolume;
+procedure netSendButtonPanning;
+procedure netGetButtonPanning;
+procedure netSendButtonPitch;
+procedure netGetButtonPitch;
+procedure netSendButtonMapping;
+procedure netGetButtonMapping;
+
+
+procedure netSendEnvelopeToucher(mode, instrument, node, x, y: longint);
+procedure netGetEnvelopeToucher;
+
+procedure netSendEnvelopeTouchedNode(node: longint);
+procedure netGetEnvelopeTouchedNode;

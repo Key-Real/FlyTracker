@@ -1,0 +1,7 @@
+#!/bin/sh
+rm ./server
+/usr/local/lib/fpc/3.3.1/ppcx64 server.pas -Fu./../../synalist-code
+rm *.o
+rm *.ppu
+rm *.res
+./server

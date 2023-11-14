@@ -1,0 +1,14 @@
+ 
+14:56] <drewski> Writeln('Name is ', {$I %CURRENTROUTINE%});
+[14:57] <Key-Real> ah, ok ,thx
+[14:57] <drewski> https://www.freepascal.org/docs-html/prog/progsu41.html
+[14:57] <drewski> there is a lot of information available
+
+
+
+https://github.com/jolonf/flac-pascal
+
+
+
+monitor connections:
+sudo iptraf-ng

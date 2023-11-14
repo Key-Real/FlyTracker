@@ -1,0 +1,9 @@
+#!/bin/bash
+rm FlyTracker
+# -Ciro 
+rm test
+/usr/local/lib/fpc/3.3.1/ppcx64 test.pas -glps -Ciro -Fu../../../../tralala-code/src -Fu../../../../tralala-code/src/bindings/alsa -Fu../../../../tralala-code/src/bindings/pulseaudio
+rm *.o
+rm *.ppu
+rm *.res
+./test

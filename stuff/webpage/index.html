@@ -1,0 +1,53 @@
+<html>
+
+	<head>
+		<title>FlyTracker</title>
+	</head>
+
+	<body style="background-color:gray;">
+	
+		<h1>FlyTracker</h1>
+		
+		 (c) by Kirill Kranz .aka. Key-Real of Verry Important Pictures 2023 (<a href="mailto:kranzkirill@gmail.com">kranzkirill@gmail.com</a>)<br> <br>
+		 Tralala Sound System (c) by Nikolay Nikolov .aka. nickysn 2023 (<a href="mailto:nickysn@gmail.com">nickysn@gmail.com</a>)
+		<br><br><br>
+		<img src="./t.jpg" width=64% height=80%>
+		<img src="./ie.jpg" width=64% height=80%>
+		<br><br><br>
+		
+		<a href="./FlyTracker.zip">FlyTracker.zip (9.08.2023 Build)</a> </li>
+		
+		<br><br><br><br>
+		<h2>How to compile</h2>
+		What You need:
+		<ul>
+			<li> <a href="https://git-scm.com/">Git</a> </li>
+			<li> <a href="https://subversion.apache.org/">SVN</a> </li>
+			<li> <a href="https://www.freepascal.org/">Free Pascal Compiler >= 3.2.2 </a> </li>
+		</ul>
+		What to do:
+		<ul>
+			<li>Create a Folder (something like FlyTracker-Source)</li>
+			<li>Open Terminal in your Folder and type:</li>
+			<ul>
+				<li>svn checkout https://svn.code.sf.net/p/tralala/code/trunk tralala-code</li>
+				<li>git clone https://key-real@git.code.sf.net/p/vipgfx/code vipgfx-code</li>
+				<li>git clone https://key-real@git.code.sf.net/p/tycoonuserinterface/code tycoonuserinterface-code</li>
+				<li>git clone https://key-real@git.code.sf.net/p/flymusictracker/code flymusictracker-code</li>
+			</ul>
+			<li>Compile:</li>
+			Navigate to ./flymusictracker-code/src
+			<ul>
+				<li>Windows: 
+					<br>fpc FlyTracker.pas -B -Fu./FlyCode -Fu./FlyCode/Shared -Fu./FlyCode/Menu -Fu./FlyCode/Tracker -Fu./FlyCode/InstrumentEditor -Fu./FlyCode/PianoRoll -Fu./FlyCode/Networking -Fu../../vipgfx-code/src -Fu../../vipgfx-code/TTF/myFT1 -Fu../../tycoonuserinterface-code/src/tuicode -Fu../../tralala-code/src -Fu../../tralala-code/src/bindings/dsound</li>
+				<br><li>Linux: 
+					<br>fpc FlyTracker.pas -B -Fu./FlyCode -Fu./FlyCode/Shared -Fu./FlyCode/Menu -Fu./FlyCode/Tracker -Fu./FlyCode/InstrumentEditor -Fu./FlyCode/PianoRoll -Fu./FlyCode/Networking -Fu../../vipgfx-code/src -Fu../../vipgfx-code/TTF/myFT1 -Fu../../tycoonuserinterface-code/src/tuicode -Fu../../tralala-code/src -Fu../../tralala-code/src/bindings/alsa -Fu../../tralala-code/src/bindings/pulseaudio</li>
+				<br><li>Mac: 
+					<br>fpc FlyTracker.pas -dUSEPAS -B -Fu./FlyCode -Fu./FlyCode/Shared -Fu./FlyCode/Menu -Fu./FlyCode/Tracker -Fu./FlyCode/InstrumentEditor -Fu./FlyCode/PianoRoll -Fu./FlyCode/Networking -Fu../../vipgfx-code/src -Fu../../vipgfx-code/TTF/myFT1 -Fu../../tycoonuserinterface-code/src/tuicode -Fu../../tralala-code/src
+					<br> <br>					
+				</li>
+			</ul>
+		</ul>
+		<br><br><br><br>
+	</body>	
+</html>

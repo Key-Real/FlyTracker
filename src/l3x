@@ -1,0 +1,30 @@
+#!/bin/sh
+rm FlyTracker
+# -Ciro 
+ppcx64 FlyTracker.pas -B -gl -Ciro -Fu./FlyCode -Fu./FlyCode/Shared -Fu./FlyCode/Menu -Fu./FlyCode/Tracker -Fu./FlyCode/InstrumentEditor -Fu./FlyCode/PianoRoll -Fu./FlyCode/Networking -Fu../../vipgfx-code/src -Fu../../vipgfx-code/TTF/myFT1 -Fu../../tycoonuserinterface-code/src/tuicode -Fu../../tralala-code/src -Fu../../tralala-code/src/bindings/alsa -Fu../../tralala-code/src/bindings/pulseaudio
+rm *.o
+rm *.ppu
+rm ./FlyCode/*.o
+rm ./FlyCode/*.ppu
+rm ./FlyCode/Menu/*.o
+rm ./FlyCode/Menu/*.ppu
+rm ./FlyCode/Tracker/*.o
+rm ./FlyCode/Tracker/*.ppu
+rm ./FlyCode/PianoRoll/*.o
+rm ./FlyCode/PianoRoll/*.ppu
+rm ./FlyCode/InstrumentEditor/*.o
+rm ./FlyCode/InstrumentEditor/*.ppu
+rm ./FlyCode/Shared/*.o
+rm ./FlyCode/Shared/*.ppu
+rm ./FlyCode/Networking/*.o
+rm ./FlyCode/Networking/*.ppu
+rm ../../vipgfx-code/src/*.o
+rm ../../vipgfx-code/src/*.ppu
+#rm ../../vipgfx-code/TTF/myFT1/*.o
+#rm ../../vipgfx-code/TTF/myFT1/*.ppu
+rm ../../tycoonuserinterface-code/src/tuicode/*.o
+rm ../../tycoonuserinterface-code/src/tuicode/*.ppu
+rm link.res
+./FlyTracker MechanismEight.s3m -ESC -1 -w -fps -local -port1234 -server127.0.0.1 &
+sleep 1
+./FlyTracker MechanismEight.s3m -ESC -1 -w -fps -local -connectto127.0.0.1 -port1234 -x-100

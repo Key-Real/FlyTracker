@@ -1,0 +1,304 @@
+
+
+
+Volume column effects are selected by pressing A-H in the first
+column of the effects.
+	Ax = fine volume slide up by x
+	Bx = fine volume slide down by x
+	Cx = volume slide up by x
+	Dx = volume slide down by x
+	Ex = pitch slide down by x
+	Fx = pitch slide up by x
+	Gx = portamento to note with speed x
+	Hx = vibrato with depth 
+
+
+
+Effects.
+Axx Set Speed.
+	I prefer to think of this command as "Set Frames per Row".
+	Normally, the tracker operates at around 50 frames a
+	second. If the rows were played at this speed, then a huge
+	amount of space would be required to enter the pattern data.
+	Instead, setting the 'speed' of the song will cause the
+	tracker to wait on the current row for 'xx' frames. Hence,
+	setting the speed at 50 (decimal = 32hex) will cause each
+	row to last about a second - quite a long time! The default
+	is A06. The initial speed can be set in the variables
+	screen on F12.
+	If two Axx commands are given in the same row, then the
+	command in the higher channel (by number) will take effect.
+Bxx Jump to order.
+	Causes the song to jump to order xx (hex). This is often
+	used to create looping songs.
+	If two Bxx commands are given, then the command in the
+	higher channel will take effect.
+Cxx Break to row.
+	The Command Cxx signifies the end of the current pattern,
+	and also that the next pattern should be played from row
+	xx (hex)
+	If two Cxx commands are given... you know :)
+D0x Volume slide down
+	The volume slide down command causes the volume of the
+	note to be reduced by x for each frame after (for that
+	row). ie. If you have a note at volume 64, with command
+	D01 and speed A06, then the final volume will be 64-5=59.
+	A note at volume 32 with command D02 at speed A05 will
+	result in a volume of 24.
+	For greater S3M compatibility, D0F will cause the volume
+	to drop by 15 EVERY frame, instead of just off-note frames.
+	Here's a full frame-by-frame description which should provide
+	greater understanding:
+	At 'speed' 4:
+	C-4 01 .. D04
+	What this does is:
+	Frame 1: Plays C-4 with instrument 1
+	Frame 2: Lowers the volume by 4
+	Frame 3: Lowers the volume by 4
+	Frame 4: Lowers the volume by 4
+	The next frame will be controlled by the next row of
+	information.
+	Dx0 Volume slide up.
+		Operates exactly the same way as D0x, but slides the
+		volume up by 'x'. Volumes cannot exceed 64 (checked
+		and limited internally).
+		For greater S3M compatibility, DF0 will cause the volume
+		to rise by 15 EVERY frame, instead of just off-note frames.
+	DFx Fine volume slide down.
+		Takes the volume down by x at the start of the row.
+	DxF Fine volume slide up.
+		Takes the volume up by x at the start of the row.
+Exx Pitch slide down
+	The pitch will slide down with speed xx (hex). In linear
+	frequency mode, a pitch slide down by a particular value
+	will always cause the same "pitch interval" - this does
+	not occur in Amiga frequency mode. Valid ranges for xx
+	are between 0 and 0DFh (as > 0E0h will be interpreted as
+	fine slides)
+	EFx Fine pitch slide down
+		Slides the pitch down by x at the start of the row.
+	EEx Extra fine pitch slide down
+		Same as EFx, but 4 times finer. (ie. EE4 is equivalent to
+		EF1)
+Fxx Pitch Slide up
+	FFx Fine Pitch slide up
+	FEx Extra fine pitch slide up
+		Operates in the same manner as the Exx commands, but
+		slides the pitch up. If the pitch gets 'too high', then
+		the channel is turned off.
+Gxx Portamento to note.
+	This command requires 2 parameters: A note to slide to
+	and a speed. Example:
+	C-4 01 ~~ .00
+	G-4 01 ~~ G08
+	~~~ ~~ ~~ G00
+	~~~ ~~ ~~ G00
+	This will cause the note C-4 to slide to G-4 with speed 8.
+	You *CAN* change the sample that the note is sliding to.
+	It is a good idea to make sure that the C5Speed of the
+	samples is similar, if you want to try this! The new sample
+	will play from it's beginning.
+Hxy Vibrato with speed x, depth y
+	Causes the frequency to osciallte with depth 'y' at speed
+	'x' which causes an interesting effect. Don't get carried
+	away with it though! If you specify EITHER x or y as 0, then
+	the previous value will be used.
+Ixy Tremor with ontime x, offtime y.
+	Causes the volume of the instrument to remain normal for
+	x frames, then sets the volume to 0 for y frames.
+Jxy Arpeggio with halftones x, y.
+	This causes the note to quickly cycle through three notes -
+	the note playing, a note x halftones above, and a note y
+	halftones above. This causes an effect similar to old
+	C-64 chords.
+	Example: C-4 01 ~~ J47 will cause the notes C-4, E-4 and
+	G-4 to be cycled.
+Kxx Dual command: Vibrato + Dxx (Volume slide)
+	Note: The vibrato could have been set with either Hxx or
+Uxx
+Lxx Dual Command: G00 + Dxx (Portamento to and Volume slide)
+Mxx Set channel volume
+	Each channel has a volume range from 0->40h. The lower
+	the value, the softer the notes in the channel. This
+	command is convenient for making 'echoes'... you won't have
+	to modify the echoing channel from the original, except
+	for placing a M20 at the top of it!
+	Values greater than 40h are ignored at playtime.
+N0x, Nx0, NFx, NxF Slide channel volume commands
+	These commands work in the same manner as the slide
+	volume commands, but operate on the channel volume,
+	rather than directly on the note volume.
+Oxx Set sample offset.
+	This will cause a sample to be played from offset yxx00h.
+	This is useful to skip past the first part of a sample
+	which may have a loud hit, or to start a speech sample
+	half way through.
+	If you specify a value PAST the end of a sample, then the
+	command is ignored.
+	The "y" part of yxx00h is set with command "SAy"
+	Example:
+	... .. .. SA5
+	C-4 01 .. O10
+	This will play note C-4, instrument 1 at offset 51000hex
+	Note to programmers: Oxx for 16-bit samples will move
+	to the xx00h*2 position in the sample - ie. the 'xx00th'
+	sample.
+P0x, Px0, PFx, PxF Slide panning commands.
+	These work in the same maner as the slide volume
+	commands, but operate on the channel panning. P0x slides
+	the panning right, while Px0 slides the panning left.
+Qxy Retriggers a note after y frames with volume modifier x.
+	This will cause a sample to be replayed from it's
+	beginning after every y frames. 'x' can be any of the
+	following:
+	Value Effect on volume each retrig.
+	0 No change
+	1 -1
+	2 -2
+	3 -4
+	4 -8
+	5 -16
+	6 *2/3
+	7 *1/2
+	8 No change
+	9 +1
+	A +2
+	B +4
+	C +8
+	D +16
+	E *3/2
+	F *2
+Rxy Tremelo with speed x, depth y
+	This command acts similarly to the vibrato command, but
+	affects the note volume, instead of the pitch. If you specify
+	EITHER x or y as 0, then the previous value will be used.
+S3x Sets vibrato waveform to x
+S4x Sets tremelo waveform to x
+S5x Sets panbrello waveform to x
+	Values for x: 0 = sine wave
+	1 = square wave
+	2 = Ramp down
+	3 = Random!
+	S70 Past note cut
+	S71 Past note off
+	S72 Past note fade
+		With the loss of 1-1 correspondence of editing channels
+		to internal playing channels, these commands provide
+		control over notes that have already been played by a
+		channel.
+		Example:
+		Consider the following situation, where instrument
+		1, notes C-4 & D-4 map to a looped sample, and the
+		New Note Action is set to continue.
+		C-4 01 64 .~~
+		D-4 01 64 .~~
+		E-4 01 64 .~~ <--- Use S70 here!
+		Ordinarily, control would be lost over C-4 and D-4, but
+		using command S70 at the point indicated, the notes C-4
+		and D-4 would be stopped immediately when the note E-4
+		plays.
+		Similarly, note off commands and Fadeout commands can
+		also be issued.
+		Note: You *MUST* be in instrument mode for these
+		to have any significance.
+	S6x Pattern delay for x ticks.
+	S73 Set NNA to note cut
+	S74 Set NNA to continue
+	S75 Set NNA to note off
+	S76 Set NNA to note fade
+		These options allow you to override the default NNA for a
+		particular NOTE (ie. it does not affect the instrument)
+		See section 2.5 for an explanation of NNAs.
+		Note: You *MUST* be in instrument mode for these to have
+		any effect.
+	S77 Turn Volume envelope off.
+		Stops the processing of the volume envelope. This is for the
+		times that you don't want to use the volume envelope that
+		you've created.
+	S78 Turn volume envelope on.
+		Sometimes, you'll decide that it's better not to use the
+		volume envelope for most cases, but you may just want to
+		use it a few times - this is the command that lets you
+		do that!
+		Note: You *MUST* be in instrument mode for this to work.
+	S8x Set panning position
+		Set panning position, S80 is leftmost, S8F is rightmost.
+		This is an obsolete command, provided only for ST3
+		compatibility. Use command Xxx instead.
+	S91 Set surround sound!
+		For those of you who are lucky enough to have a dolby
+		surround sound decoder (myself not included - so if ya
+		wanna send me something.....), this *should* cause the
+		sound to come from the surround speaker. This is a
+		pseudo-panning command, and issuing either Xxx or S8x
+		will cause the surround sound to be reset.
+		If you try and play Surround Sound on a GUS, Interwave
+		or AWE32, it will be played as a central pan.
+		SAy Set high-offset. Check Oxx for an example.
+	SB0 Set loopback point
+	SBx Loop x times.
+		This pattern space-saving feature will cause the pattern
+		to be looped x times back to the last SB0. Note that you
+		can only loop within the pattern! Also, each channel has
+		it's own loop-back information... so you HAVE to have the
+	SB0 and SBx in the same channel for it to operate.
+	SCx Note cut after x frames
+		This will cause a note to be immediately stopped after x
+		frames. It is similar to issuing a "^^^" in the note column,
+		just that it has a finer control over timing.
+	SDx Note delay for x frames
+		Actually, this command works like "interpretation" delay
+		for x frames. Any data - note, sample/instrument or volume
+		in the channel will not be interpreted until x frames into
+		the row.
+	SEx Pattern delay for x rows
+		This will cause a "pause" on the row for effectively x rows
+		longer.
+		Note that if TWO pattern delay commands are issued, then
+		the only the command in the higher channel will be considered.
+Txx Set tempo to xx
+	Valid ranges are between 20h and 0FFh. The higher the
+	value, the faster the playback. This essentially
+	determines the time length of each frame, by the following
+	formulas:
+	Frames per minute = 24*Tempo
+	equivalently:
+	Frames per second = 0.4*Tempo
+T0x Tempo slide down
+T1x Tempo slide up
+	Tempo slides up and down are used to smoothly modify the
+	speed of the song. The tempo is modified by ~x every
+	non-row frame.
+Uxy Fine vibrato with speed x, depth y
+	Same as vibrato, but 4 times finer in depth.
+Vxx Set Global volume
+	Valid ranges are between 0 and 80h. All notes playing are
+	affected by this change.
+	Values greater than 80h are ignored at playtime.
+W0x, Wx0, WFx, WxF Slide global volume
+	Similar to the Dxx commands, but operate on the global
+	volume. Useful when fading out songs.
+Xxx Set panning position
+	Sets the panning position anywhere from left to right (X00
+	is left, XFF is right).
+Yxy Panbrello with speed x, depth y.
+	What the hell is panbrello? Well, it's a word that I coined
+	late one night after a friend suggested that there should
+	be a random pan position command. I decided.. why not - I'll
+	make the vibrato/tremelo equivalent of panning! And so you
+	have here, 'panbrello.' What this does is instead of
+	oscillating frequency (pitch) or volume, it oscillates the
+	panning position about the 'set' panning position for a
+	channel. This is for you techno freaks out there who want
+	another function to stuff around with! :)
+	The random pan position can be achieved by setting the
+	waveform to 3 (ie. a S53 command). In this case *ONLY*, the
+	speed actually is interpreted as a delay in frames before
+	another random value is found. so S14 will be a very QUICK
+	panbrello, and S44 will be a slower panbrello. With any
+	other waveform, the higher the value for x, the faster the
+	panbrello, like vibrato and tremelo. If you don't know what
+	I'm talking about, check out the stereo-indicators on the
+	info page (don't forget that you have to be in stereo mode!)
+	If you specify EITHER x or y as 0, then the previous value
+	will be used.

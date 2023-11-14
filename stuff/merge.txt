@@ -1,0 +1,6 @@
+clone
+
+git checkout main && git pull && git checkout myFeatureBranch && git rebase -i main
+
+git checkout -b key-real-midi-patch
+git push <fork name> <bruch name>

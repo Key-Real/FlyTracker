@@ -1,0 +1,4 @@
+#!/bin/bash
+./FlyTracker MechanismEight.s3m -ESC -1 -w -fps -local -port1234 -server192.168.100.162 &
+sleep 1
+./FlyTracker MechanismEight.s3m -ESC -1 -w -fps -local -connectto192.168.100.162 -port1234 -x-100 

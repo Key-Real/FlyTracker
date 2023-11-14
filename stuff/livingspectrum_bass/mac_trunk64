@@ -1,0 +1,10 @@
+#!/bin/bash
+rm test
+/usr/local/lib/fpc/3.3.1/ppca64 -B ls.pas -gl -Fu../../../vipgfx-code/src -Fu../../../tralala-code/src
+rm *.o
+rm *.ppu
+rm *.s
+rm link.res
+rm ../../../vipgfx-code/src/*.o
+rm ../../../vipgfx-code/src/*.ppu
+./test 

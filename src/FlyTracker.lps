@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="FlyTracker.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="15"/>
+        <UsageCount Value="25"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\uTracker.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="108"/>
+        <CursorPos Y="130"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tuiMiddleScrollBox.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="240"/>
+        <CursorPos X="37" Y="265"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\Menu.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="220"/>
+        <CursorPos X="22" Y="229"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tralala-code\src\dev_alsa.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="33" Y="47"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tralala-code\src\dev_pulseaudio.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="33" Y="38"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\Tracker\MoveCursor.implementation.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="228"/>
+        <CursorPos Y="260"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tuiMiddleScrollBox2Entries.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="223"/>
+        <CursorPos X="28" Y="252"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tuiScrollBarVertical.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="162"/>
+        <CursorPos Y="194"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\Tracker\InstrumentSelector.implementation.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="10"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tuiEditableSelectBoxNumbered.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="351"/>
+        <CursorPos Y="369"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tuiBox.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="24"/>
+        <CursorPos Y="56"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\theMain.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="62" Y="55"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="197"/>
+        <CursorPos Y="229"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tuiScrollBarHorizontal.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="190"/>
+        <CursorPos Y="211"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\InstrumentEditor\Mapping.implementation.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\InstrumentEditor\Samples.implementation.inc"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="8"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tralala-code\src\unixmessagequeue.pp"/>
+        <UnitName Value="UnixMessageQueue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="78"/>
+        <CursorPos Y="95"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\Shared\thePatternSelector.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="181"/>
+        <CursorPos Y="204"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.MenuVertical.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="381"/>
+        <CursorPos X="9" Y="402"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="FlyCode\Tracker\Block.implementation.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="14"/>
+        <CursorPos Y="36"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="101"/>
+        <CursorPos Y="129"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\vipgfx-code\src\tools.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="372"/>
+        <CursorPos Y="392"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.ScrollBarVertical.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="387"/>
+        <CursorPos Y="404"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="192"/>
+        <CursorPos Y="219"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="206" TopLine="178"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="209" TopLine="181"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="211" TopLine="183"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="213" TopLine="185"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="214" TopLine="187"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="216" TopLine="189"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="218" TopLine="191"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.EditableSelectBoxNumbered.pas"/>
+        <Caret Line="219" TopLine="192"/>
+      </Position>
+      <Position>
+        <Filename Value="FlyCode\InstrumentEditor\Samples.implementation.inc"/>
+        <Caret Line="16"/>
+      </Position>
+      <Position>
+        <Filename Value="FlyCode\InstrumentEditor\Samples.implementation.inc"/>
+        <Caret Line="8"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="111" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="113" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="114" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="115" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="168" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="170" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="171" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="172" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="173" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="174" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="176" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="117" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="118" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="119" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="121" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="122" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="123" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="124" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="126" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\tycoonuserinterface-code\src\tuicode\tui.TextBox.pas"/>
+        <Caret Line="127" TopLine="100"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default">
+        <Mode Name="default">
+          <local>
+            <CommandLineParams Value="06-tek11bak.s3m  -w -esc -fps -4"/>
+          </local>
+        </Mode>
+      </Modes>
+    </RunParams>
+    <HistoryLists>
+      <List Name="LaunchingApplication" Type="File" Count="1">
+        <Item1 Value="/usr/bin/konsole -T &apos;Lazarus Run Output&apos; -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </List>
+      <List Name="CommandLineParameters" Count="8">
+        <Item1 Value="06-tek11bak.s3m  -w -esc -fps -4"/>
+        <Item2 Value="06-tek11bak.s3m  -w -esc -fps"/>
+        <Item3 Value="dubbish.xm -w -esc -fps"/>
+        <Item4 Value="dubbish.xm -w -4 -esc -fps"/>
+        <Item5 Value="-w -4 -esc -fps"/>
+        <Item6 Value="-alsa -4 -esc -fps"/>
+        <Item7 Value="dubbish.xm -w -4 -ESC -fps"/>
+        <Item8 Value="06-tek11bak.s3m  -w -ESC -fps"/>
+      </List>
+    </HistoryLists>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\tycoonuserinterface-code\src\tuicode\tuiBox.inc"/>
+        <Line Value="376"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\tycoonuserinterface-code\src\tuicode\tuiBox.inc"/>
+        <Line Value="49"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\tycoonuserinterface-code\src\tuicode\tuiScrollBarHorizontal.pas"/>
+        <Line Value="211"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="FlyCode\InstrumentEditor\Samples.implementation.inc"/>
+        <Line Value="8"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
